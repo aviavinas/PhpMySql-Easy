@@ -1,33 +1,26 @@
 <?php
 /*
- * Author  Avinash Kumar  < toAvinash@clipming.com >
- * Copyright 2016 ClipMing.Com
+ * Author  Avinash Kumar  < aviavinash.official@gmail.com >
+ * Copyright 2018 StanBuzz.Com
  *
  *
- * This page handles basic functionality of
- * clipming, so it is mostly required by
- * most of the module.
+ * This class handles all Communication the
+ * of Php to Mysql Database
  */
 
 // - -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 /*
-* It handles the every Database operation
+* Handles the every Database operation
 * and makes error log.
 */
 
 class Database {
 	// Public info
-		#database
-	public $database ="stanbuzz_db";
+	#database
+	public $database ="my_db";
   	#tables
-	public $t_user = "sbuser";
-	public $t_vendor = "vendor";
-	public $t_activity = "useractivity";
-	public $t_buss = "business";
-	public $t_prod = "product";
-	public $t_bank_ac = "bank_ac";
-	public $t_session = "UserSession";
+	public $example_table = "mytable";
 
   // Private data
 	private $serverhost = "localhost";
@@ -41,7 +34,6 @@ class Database {
 
 	public function __construct() {
 		 $this->connect();
-
 	}
 
     public function connect() {
